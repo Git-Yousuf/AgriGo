@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgriGo</title>
+
+    <!-- Link for Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- Link for CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS Files/HomePage.css') }}">
+
+    <!-- Link for Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+     <!-- Link for jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div class="content-1">
+        <header>
+            <nav>
+                <img src="static/Images and Videos/AgriGo Logo/AgriGo-Logo.png" alt="AgriGo Logo" class="logo-img">
+                <div class="nav-titles">
+                    <button class="Nav-button">Categories</button>
+                    <button class="Nav-button">About Us</button>
+                    <button class="Nav-button">FAQ's</button>
+                    <button class="Nav-button">Contact Us</button>
+                    <button class="Nav-button Login-btn">Login</button>
+                </div>
+                <div class="menu-toggle-icon" onclick="showNavbar()">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+            <div class="side-navbar">
+                <P style="text-align: right;" onclick="closeNavbar()"><i class="fa-solid fa-xmark"></i></P>
+                <div class="side-navbar-links">
+                    <p class="side-navbar-link">Categories</p>
+                    <p class="side-navbar-link">About Us</p>
+                    <p class="side-navbar-link">FAQ's</p>
+                    <p class="side-navbar-link">Contact Us</p>
+                    <p class="side-navbar-link Login-btn">Login</p>
+                </div>
+            </div>
+        </header>
+        <section class="section-1">
+            <div class="text-before-slideshow">
+                <h1 class="section-1-h1">Buy fruits and vegetables</h1>
+                <p class="section-1-p">Directly from the farmers...</p>
+                <button  class="buy-button btn-1">Buy Now</button>
+            </div>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="static/Images and Videos/SlideShow Images/Fruits.png" class="sliding-image" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="static/Images and Videos/SlideShow Images/Veg.png" class="sliding-image image" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="static/Images and Videos/SlideShow Images/Pulse.png" class="sliding-image image" style="width:100%">
+                </div>
+                <div class="mySlides fade">
+                    <img src="static/Images and Videos/SlideShow Images/Cereals.png" class="sliding-image image" style="width:100%">
+                </div>            
+            </div>
+        </section>
+        <section class="section-2">
+                <div class="section-2-content-left">
+                    <h2>We provide Best Customer Experience</h2>
+                    <h2></h2>
+                </div>
+                <div class="section-2-content-right">
+                    <p>We Ensure that our customer have the best shopping experience</p>
+                </div>
+        </section>
+    </div>  
+    <div class="content-2">
+            <div>
+                <i class="fa-regular fa-face-smile"></i>
+                <h4>Satisfaction Gurantee</h4>
+                <p>Your satisfaction is our priority. Enjoy a hassle-free shopping experience with our 100% satisfaction guarantee!</p>
+            </div>
+            <div>
+                <i class="fas fa-star"></i>
+                <h4>New Arrival Everyday</h4>
+                <p>Discover something new every day! Check out our fresh arrivals daily for the latest trends and must-have items.</p>
+            </div>
+            <div>
+                <i class="fas fa-plane"></i>
+                <h4>Fast and Free Shipping</h4>
+                <p>Enjoy the convenience of fast and free shipping on all orders! Shop now and get your favorites delivered to your doorstep in no time.</p>
+            </div>
+    </div>
+    <!--
+    <div class="content">
+        <h2 style="padding: 0px;">Categories</h2>
+        <div class="new-arrival">
+            <div class="new-arrival-container">
+                <img src="Cereals.png" alt="">
+                <button>Shop Now <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="new-arrival-container">
+                <img src="Fruits.png" alt="">
+                <button>Shop Now <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="new-arrival-container">
+                <img src="Veg.png" alt="">
+                <button>Shop Now <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+            <div class="new-arrival-container">
+                <img src="Pulse.png" alt="">
+                <button>Shop Now <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+         </div>
+    </div>
+    -->
+    <div class="content-3">
+        <h1>Categories</h1>
+        <section class="section-3">
+            <div class="CC Categories-container-1">
+                <div>
+                    <img src="static/Images and Videos/SlideShow Images/Fruits.png" alt="Fruits Images">
+                </div>
+                <div class="Category-text">
+                    <h1>Fruits</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor quas asperiores explicabo cumque, facere expedita nulla consequatur cupiditate aperiam sed quidem voluptatibus ipsum doloremque odit corporis dicta, assumenda architecto odio!</p>
+                    <div>
+                        <span>110$</span>
+                        <button type="button">See more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="CC Categories-container-2">
+                <div>
+                    <img src="static/Images and Videos/SlideShow Images/Veg.png" alt="Vegetables Images">
+                </div>
+                <div class="Category-text">
+                    <h1>Vegetables</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor quas asperiores explicabo cumque, facere expedita nulla consequatur cupiditate aperiam sed quidem voluptatibus ipsum doloremque odit corporis dicta, assumenda architecto odio!</p>
+                    <div>
+                        <span>150$</span>
+                        <button type="button">See more</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+            
+        
+    </div>
+    <script src="static/Javascript Files/HomePage.js"></script>
+</body>
+</html>

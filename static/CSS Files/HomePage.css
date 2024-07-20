@@ -32,6 +32,24 @@ body{
 
 /* Header */
 
+@keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+  }
+
 header{
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     border-radius: 4px;
@@ -149,6 +167,14 @@ nav{
     margin-bottom: 8px;
 }
 
+.text-before-slideshow{
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-name: slideInLeft;
+}
+
 /* SlideShow Images */
 
 .slideshow-container {  
@@ -156,7 +182,11 @@ nav{
     width: 350px;
     height: 300px;
     margin-top: 100px;
-    
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-name: slideInRight;
 }
 
 .mySlides {
@@ -317,6 +347,13 @@ nav{
 
 */
 
+.content-3{
+    padding: 25px 25px;
+    margin: 40px 0px;
+}
+
+
+
 .section-3{
     display: flex;
     justify-content: space-between;
@@ -341,13 +378,83 @@ nav{
 }
 
 .Category-text h1{
-    padding-bottom: 25px;
+    padding-bottom: 15px;
     color: var(--Green);
+    font-size: 35px;
 }
 
 .Category-text p{
     padding-bottom: 25px;
 }
+
+.section-4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 30px;
+    margin-top: 15px;
+}
+
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+  
+  .btn-5 {
+    width: 130px;
+    height: 40px;
+    line-height: 42px;
+    padding: 0;
+    border: none;
+    background: var(--Green);
+    background: linear-gradient(0deg, var(--Green) 0%, #0fa641 100%);
+  }
+  .btn-5:hover {
+    color: var(--Hover_color_Green);
+    background: transparent;
+     box-shadow:none;
+  }
+  .btn-5:before,
+  .btn-5:after{
+    content:'';
+    position:absolute;
+    top:0;
+    right:0;
+    height:2px;
+    width:0;
+    background: var(--Green);
+    box-shadow:
+     -1px -1px 5px 0px #fff,
+     7px 7px 20px 0px #0003,
+     4px 4px 5px 0px #0002;
+    transition:400ms ease all;
+  }
+  .btn-5:after{
+    right:inherit;
+    top:inherit;
+    left:0;
+    bottom:0;
+  }
+  .btn-5:hover:before,
+  .btn-5:hover:after{
+    width:100%;
+    transition:800ms ease all;
+  }
+  
 
 /* Media Quries */
 
@@ -358,6 +465,22 @@ nav{
     }
     .CC{
         width: 85%;
+    }
+    .section-4 {
+        flex-direction: column;
+        gap: 50px;
+    }
+    .Categories-container-2{
+        margin-top: 20px;
+    }
+    .Categories-container-3{
+        margin-top: 20px;
+    }
+    .Categories-container-4{
+        margin-top: 20px;
+    }
+    .content-3{
+        padding: 25px 0px;
     }
 }
 
@@ -418,6 +541,16 @@ nav{
     }
     .content-2{
         flex-direction: column;
+        height: 100%;
+    }
+    .CC div img {
+        width: 150px;
+    }
+    .Category-text h1{
+        font-size: 25px;
+    }
+    .Category-text p{
+        font-size: 12px;
     }
 }
 

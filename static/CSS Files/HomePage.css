@@ -277,7 +277,7 @@ nav{
   }
   
   
-  @-webkit-keyframes shiny-btn1 {
+  @keyframes shiny-btn1 {
       0% { -webkit-transform: scale(0) rotate(45deg); opacity: 0; }
       80% { -webkit-transform: scale(0) rotate(45deg); opacity: 0.5; }
       81% { -webkit-transform: scale(4) rotate(45deg); opacity: 1; }
@@ -380,6 +380,7 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: 25px 30px;
+    margin-top: 25px;
 }
 
 .CC{
@@ -476,7 +477,56 @@ nav{
     transition:800ms ease all;
   }
   
+  .Mobile-About-Us {
+    perspective: 1000px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.card {
+    display: none;
+    width: 600px;
+    height: 400px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    transition: transform 0.6s;
+}
+
+.card:hover {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+.front {
+    background-color: #fff;
+}
+
+.front img{
+    width: 100%;
+    height: 100%;
+}
+
+.back {
+    background-color: var(--Green);
+    color: white;
+    transform: rotateY(180deg);
+    font-size: 25px;
+}
 /* Media Quries */
 
 @media screen and (max-width:1200px) {
@@ -502,9 +552,6 @@ nav{
     }
     .content-3{
         padding: 25px 0px;
-    }
-    .content-3 h1{
-        text-align: center;
     }
 }
 
@@ -576,6 +623,9 @@ nav{
     .Category-text p{
         font-size: 12px;
     }
+    .card {
+        display: block;
+    }
 }
 
 @media screen and (max-width:550px) {
@@ -588,6 +638,9 @@ nav{
     }
     .section-1{
         padding: 5px 15px;
+    }
+    .CC div img {
+        width: 100px;
     }
 }
 
